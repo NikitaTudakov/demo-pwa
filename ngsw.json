@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1694692372357,
+  "timestamp": 1694693727395,
   "index": "https://nikitatudakov.github.io/demo-pwa/index.html",
   "assetGroups": [
     {
@@ -14,6 +14,7 @@
         "https://nikitatudakov.github.io/demo-pwa/favicon.ico",
         "https://nikitatudakov.github.io/demo-pwa/index.html",
         "https://nikitatudakov.github.io/demo-pwa/main.608d774dc962ad10.js",
+        "https://nikitatudakov.github.io/demo-pwa/manifest.webmanifest",
         "https://nikitatudakov.github.io/demo-pwa/polyfills.798bd4757a459d16.js",
         "https://nikitatudakov.github.io/demo-pwa/runtime.0ed273321a986c61.js",
         "https://nikitatudakov.github.io/demo-pwa/styles.21b186aa9b55f209.css"
@@ -27,15 +28,35 @@
       "cacheQueryOptions": {
         "ignoreVary": true
       },
-      "urls": [],
+      "urls": [
+        "https://nikitatudakov.github.io/demo-pwa/assets/icons/android-chrome-192x192.png",
+        "https://nikitatudakov.github.io/demo-pwa/assets/icons/android-chrome-512x512.png",
+        "https://nikitatudakov.github.io/demo-pwa/assets/icons/apple-touch-icon.png",
+        "https://nikitatudakov.github.io/demo-pwa/assets/icons/browserconfig.xml",
+        "https://nikitatudakov.github.io/demo-pwa/assets/icons/favicon-16x16.png",
+        "https://nikitatudakov.github.io/demo-pwa/assets/icons/favicon-32x32.png",
+        "https://nikitatudakov.github.io/demo-pwa/assets/icons/mstile-150x150.png",
+        "https://nikitatudakov.github.io/demo-pwa/assets/icons/safari-pinned-tab.svg",
+        "https://nikitatudakov.github.io/demo-pwa/assets/icons/site.webmanifest"
+      ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "https://nikitatudakov.github.io/demo-pwa/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://nikitatudakov.github.io/demo-pwa/index.html": "03515540d2d6da1c06e5c9c4bee4b9b8acab0079",
+    "https://nikitatudakov.github.io/demo-pwa/assets/icons/android-chrome-192x192.png": "428a12116f0bdc8e0addae76ffcd964c213ba373",
+    "https://nikitatudakov.github.io/demo-pwa/assets/icons/android-chrome-512x512.png": "3ee6e09ba1b3a86ba101a4d7bd6c39b3f9d05640",
+    "https://nikitatudakov.github.io/demo-pwa/assets/icons/apple-touch-icon.png": "d5c6c575f667f9a0f800338d32b025a166f9eaa9",
+    "https://nikitatudakov.github.io/demo-pwa/assets/icons/browserconfig.xml": "d6492d6db4c33b82049db788e7739deccd025a1e",
+    "https://nikitatudakov.github.io/demo-pwa/assets/icons/favicon-16x16.png": "beded7df0c41d2d0fd4cdc9b066710815a16ea78",
+    "https://nikitatudakov.github.io/demo-pwa/assets/icons/favicon-32x32.png": "6358c3ebceb99b9a268ce4a8afa90866b363e65e",
+    "https://nikitatudakov.github.io/demo-pwa/assets/icons/mstile-150x150.png": "d7f5d5780366b44460d45e8b48c33cb4fdf5e69b",
+    "https://nikitatudakov.github.io/demo-pwa/assets/icons/safari-pinned-tab.svg": "ece0fa1185b064bff1f5c792973bfde3720c37b9",
+    "https://nikitatudakov.github.io/demo-pwa/assets/icons/site.webmanifest": "13e5aa58eb2182d8ace63266856c8cc29c47c083",
+    "https://nikitatudakov.github.io/demo-pwa/favicon.ico": "bede03923755b20bd2eb3d8a82507f2dc66bc286",
+    "https://nikitatudakov.github.io/demo-pwa/index.html": "7e9d5bc6be0d177f9ddfdc69885d9cfcbb8b7737",
     "https://nikitatudakov.github.io/demo-pwa/main.608d774dc962ad10.js": "238e64c4d0edb3856dab56e9f9b626735b624ddb",
+    "https://nikitatudakov.github.io/demo-pwa/manifest.webmanifest": "139f18da8178f36d36d7f90de752f9c2cf1bd0d9",
     "https://nikitatudakov.github.io/demo-pwa/polyfills.798bd4757a459d16.js": "4021a524ebde9e9a616d26df7ae92b0a2c90b124",
     "https://nikitatudakov.github.io/demo-pwa/runtime.0ed273321a986c61.js": "5c7a6371fdaea353a96da7be48575fe9e5614137",
     "https://nikitatudakov.github.io/demo-pwa/styles.21b186aa9b55f209.css": "905dc7b54ea0ccea8ea924c0cd7f58837b14f668"
