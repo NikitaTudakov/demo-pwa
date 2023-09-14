@@ -1,0 +1,62 @@
+{
+  "configVersion": 1,
+  "timestamp": 1694692372357,
+  "index": "https://nikitatudakov.github.io/demo-pwa/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://nikitatudakov.github.io/demo-pwa/favicon.ico",
+        "https://nikitatudakov.github.io/demo-pwa/index.html",
+        "https://nikitatudakov.github.io/demo-pwa/main.608d774dc962ad10.js",
+        "https://nikitatudakov.github.io/demo-pwa/polyfills.798bd4757a459d16.js",
+        "https://nikitatudakov.github.io/demo-pwa/runtime.0ed273321a986c61.js",
+        "https://nikitatudakov.github.io/demo-pwa/styles.21b186aa9b55f209.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://nikitatudakov.github.io/demo-pwa/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://nikitatudakov.github.io/demo-pwa/index.html": "03515540d2d6da1c06e5c9c4bee4b9b8acab0079",
+    "https://nikitatudakov.github.io/demo-pwa/main.608d774dc962ad10.js": "238e64c4d0edb3856dab56e9f9b626735b624ddb",
+    "https://nikitatudakov.github.io/demo-pwa/polyfills.798bd4757a459d16.js": "4021a524ebde9e9a616d26df7ae92b0a2c90b124",
+    "https://nikitatudakov.github.io/demo-pwa/runtime.0ed273321a986c61.js": "5c7a6371fdaea353a96da7be48575fe9e5614137",
+    "https://nikitatudakov.github.io/demo-pwa/styles.21b186aa9b55f209.css": "905dc7b54ea0ccea8ea924c0cd7f58837b14f668"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
