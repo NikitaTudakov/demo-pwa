@@ -2,7 +2,7 @@
     "name": "Demo PWA App",
     "short_name": "Demo PWA",
     "description": "A Progressive Web App built with Angular.",
-    "start_url": "/demo-pwa/",
+    "start_url": "demo-pwa/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#007bff",

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1694694232037,
+  "timestamp": 1694694578605,
   "index": "https://nikitatudakov.github.io/demo-pwa/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://nikitatudakov.github.io/demo-pwa/favicon.ico",
         "https://nikitatudakov.github.io/demo-pwa/index.html",
-        "https://nikitatudakov.github.io/demo-pwa/main.608d774dc962ad10.js",
+        "https://nikitatudakov.github.io/demo-pwa/main.251017d142f96d8c.js",
         "https://nikitatudakov.github.io/demo-pwa/manifest.webmanifest",
         "https://nikitatudakov.github.io/demo-pwa/polyfills.798bd4757a459d16.js",
         "https://nikitatudakov.github.io/demo-pwa/runtime.0ed273321a986c61.js",
@@ -54,9 +54,9 @@
     "https://nikitatudakov.github.io/demo-pwa/assets/icons/safari-pinned-tab.svg": "ece0fa1185b064bff1f5c792973bfde3720c37b9",
     "https://nikitatudakov.github.io/demo-pwa/assets/icons/site.webmanifest": "13e5aa58eb2182d8ace63266856c8cc29c47c083",
     "https://nikitatudakov.github.io/demo-pwa/favicon.ico": "bede03923755b20bd2eb3d8a82507f2dc66bc286",
-    "https://nikitatudakov.github.io/demo-pwa/index.html": "fa04f67402e2adf865d6606d0179f62d45b87848",
-    "https://nikitatudakov.github.io/demo-pwa/main.608d774dc962ad10.js": "238e64c4d0edb3856dab56e9f9b626735b624ddb",
-    "https://nikitatudakov.github.io/demo-pwa/manifest.webmanifest": "a0eb824b62ed6a60ba3899beff6c61bc957f18ce",
+    "https://nikitatudakov.github.io/demo-pwa/index.html": "81e4dbe17991eff1526ef3d233ee74b7820ca31e",
+    "https://nikitatudakov.github.io/demo-pwa/main.251017d142f96d8c.js": "27c83717ce767963955efba1fffba15edb89d5dd",
+    "https://nikitatudakov.github.io/demo-pwa/manifest.webmanifest": "7c906550fa45f011cb974aac86694f095105a04a",
     "https://nikitatudakov.github.io/demo-pwa/polyfills.798bd4757a459d16.js": "4021a524ebde9e9a616d26df7ae92b0a2c90b124",
     "https://nikitatudakov.github.io/demo-pwa/runtime.0ed273321a986c61.js": "5c7a6371fdaea353a96da7be48575fe9e5614137",
     "https://nikitatudakov.github.io/demo-pwa/styles.21b186aa9b55f209.css": "905dc7b54ea0ccea8ea924c0cd7f58837b14f668"
