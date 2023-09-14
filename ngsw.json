@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1694693960283,
+  "timestamp": 1694694232037,
   "index": "https://nikitatudakov.github.io/demo-pwa/index.html",
   "assetGroups": [
     {
@@ -56,7 +56,7 @@
     "https://nikitatudakov.github.io/demo-pwa/favicon.ico": "bede03923755b20bd2eb3d8a82507f2dc66bc286",
     "https://nikitatudakov.github.io/demo-pwa/index.html": "fa04f67402e2adf865d6606d0179f62d45b87848",
     "https://nikitatudakov.github.io/demo-pwa/main.608d774dc962ad10.js": "238e64c4d0edb3856dab56e9f9b626735b624ddb",
-    "https://nikitatudakov.github.io/demo-pwa/manifest.webmanifest": "139f18da8178f36d36d7f90de752f9c2cf1bd0d9",
+    "https://nikitatudakov.github.io/demo-pwa/manifest.webmanifest": "a0eb824b62ed6a60ba3899beff6c61bc957f18ce",
     "https://nikitatudakov.github.io/demo-pwa/polyfills.798bd4757a459d16.js": "4021a524ebde9e9a616d26df7ae92b0a2c90b124",
     "https://nikitatudakov.github.io/demo-pwa/runtime.0ed273321a986c61.js": "5c7a6371fdaea353a96da7be48575fe9e5614137",
     "https://nikitatudakov.github.io/demo-pwa/styles.21b186aa9b55f209.css": "905dc7b54ea0ccea8ea924c0cd7f58837b14f668"
