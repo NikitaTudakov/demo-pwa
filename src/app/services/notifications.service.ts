@@ -23,8 +23,6 @@ export class NotificationsService {
   async requestNotificationPermission () {
     try {
       const permission = await Notification.requestPermission();
-      console.log(permission)
-
       if (permission === 'granted') {
         // Permission granted, you can now send notifications
       }
@@ -43,8 +41,6 @@ export class NotificationsService {
         registration.showNotification(title, payload);
       });
     } else {
-      console.log('here')
-
       new Notification(title, payload);
     }
   }
