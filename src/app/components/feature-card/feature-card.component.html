@@ -1,1 +1,4 @@
-<p>feature-card works!</p>
+<div class="feature-card" [routerLink]="feature.routerUrl">
+    <div><mat-icon>{{feature.icon}}</mat-icon></div>
+    <span class="feature-card__name">{{feature.name}}</span>
+</div>

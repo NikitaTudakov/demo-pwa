@@ -7,22 +7,34 @@ import { FeaturesComponent } from './components/features/features.component';
 import { FeatureCardComponent } from './components/feature-card/feature-card.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import {MatIconModule} from '@angular/material/icon';
+import { WebAuthComponent } from './components/web-auth/web-auth.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BackButtonComponent } from './components/back-button/back-button.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     FeaturesComponent,
-    FeatureCardComponent
+    FeatureCardComponent,
+    WebAuthComponent,
+    NotificationsComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

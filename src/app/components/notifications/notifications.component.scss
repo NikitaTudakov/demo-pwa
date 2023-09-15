@@ -1,15 +1,16 @@
-.features-container {
-    height: 100%;
-}
-
-.heading {
+.content {
     padding: 50px 30px;
 }
 
-.features {
+.actions {
+    margin-top: 50px;
     display: flex;
-    gap: 50px;
-    justify-content: center;
+    gap: 20px;
+
+    button {
+        width: 250px;
+        white-space: normal;
+    }
 
     @media screen and (max-width: 450px) {
         flex-direction: column;

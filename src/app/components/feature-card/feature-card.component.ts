@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Feature } from 'src/app/interfaces/feature.interface';
 
 @Component({
   selector: 'app-feature-card',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feature-card.component.scss']
 })
 export class FeatureCardComponent implements OnInit {
-
+  @Input() feature: Feature;
+  
   constructor() { }
 
   ngOnInit(): void {

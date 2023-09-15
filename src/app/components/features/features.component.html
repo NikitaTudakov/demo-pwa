@@ -1,1 +1,10 @@
-<p>features works!</p>
+<div class="features-container">
+    <h1 class="heading">PWA Features</h1>
+    <div class="features">
+        <app-feature-card
+            *ngFor="let feature of featureList"
+            [feature]="feature">
+        </app-feature-card>
+    </div>
+</div>
+

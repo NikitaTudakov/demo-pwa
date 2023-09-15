@@ -1,0 +1,28 @@
+.feature-card {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #64CCC5;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #4BB8B1;
+    }
+
+    &__name {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    mat-icon {
+        font-size: 60px;
+        width: 60px;
+        height: 60px;
+        margin-top: 10px;
+    }
+}

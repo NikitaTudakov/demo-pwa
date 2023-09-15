@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Feature } from 'src/app/interfaces/feature.interface';
 
 @Component({
   selector: 'app-features',
@@ -7,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeaturesComponent implements OnInit {
 
+  public featureList: Feature[] = [
+    {name:'Web Authentication',icon:'fingerprint', routerUrl:'web-auth'},
+    {name:'Notifications', icon:'notifications', routerUrl:'notifications'},
+  ]
   constructor() { }
 
   ngOnInit(): void {
