@@ -24,4 +24,10 @@
         height: 150px;
         margin-top: 10px;
     }
+
+    @media screen and (max-width: 450px) {
+        .feature-card__name {
+            text-align: center;
+        }
+    }
 }

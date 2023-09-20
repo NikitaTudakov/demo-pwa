@@ -23,7 +23,8 @@ const fido = new Fido2Lib({
   authenticatorUserVerification: 'required'
 });
 
-const origin = 'http://localhost:4200';
+// const origin = 'http://localhost:4200';
+const origin = 'https://nikitatudakov.github.io';
 
 const app = express();
 
