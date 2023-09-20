@@ -26,6 +26,13 @@
     }
 
     @media screen and (max-width: 450px) {
+
+        mat-icon {
+            width: 100px;
+            height: 100px;
+            font-size: 100px;
+        }
+    
         .feature-card__name {
             text-align: center;
         }
