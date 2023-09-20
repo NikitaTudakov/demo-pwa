@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1694774161710,
+  "timestamp": 1695205233800,
   "index": "https://nikitatudakov.github.io/demo-pwa/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "https://nikitatudakov.github.io/demo-pwa/favicon.ico",
         "https://nikitatudakov.github.io/demo-pwa/index.html",
-        "https://nikitatudakov.github.io/demo-pwa/main.9bd01b41a623a67b.js",
+        "https://nikitatudakov.github.io/demo-pwa/main.9126c73bd023f525.js",
         "https://nikitatudakov.github.io/demo-pwa/manifest.webmanifest",
         "https://nikitatudakov.github.io/demo-pwa/polyfills.798bd4757a459d16.js",
         "https://nikitatudakov.github.io/demo-pwa/runtime.0ed273321a986c61.js",
-        "https://nikitatudakov.github.io/demo-pwa/styles.df97292611da562a.css"
+        "https://nikitatudakov.github.io/demo-pwa/styles.2f86705586412be1.css"
       ],
       "patterns": []
     },
@@ -52,12 +52,12 @@
     "https://nikitatudakov.github.io/demo-pwa/assets/icons/mstile-150x150.png": "2eb108a49650ef224049e6b922e4ff49827774f2",
     "https://nikitatudakov.github.io/demo-pwa/assets/icons/safari-pinned-tab.svg": "b61c2fe016bbd166a78a89e2f65c2390521766af",
     "https://nikitatudakov.github.io/demo-pwa/favicon.ico": "08212d4fcb1043781c5b407bbdab3c382cfc7ad7",
-    "https://nikitatudakov.github.io/demo-pwa/index.html": "9cdb04945ada853f3e5113f34ece5e374596c978",
-    "https://nikitatudakov.github.io/demo-pwa/main.9bd01b41a623a67b.js": "21f3efff2e4fd0f1d97f169fd9d5a6ef1ad1141f",
+    "https://nikitatudakov.github.io/demo-pwa/index.html": "3e7cd8920834a8715898a75c47edf00a46c7518b",
+    "https://nikitatudakov.github.io/demo-pwa/main.9126c73bd023f525.js": "882b3239a86f9ea1d950f4227c91d4c7f0a7d4d6",
     "https://nikitatudakov.github.io/demo-pwa/manifest.webmanifest": "89d55e4608b0d7490f8dc2ef725f7a7537ec3198",
     "https://nikitatudakov.github.io/demo-pwa/polyfills.798bd4757a459d16.js": "4021a524ebde9e9a616d26df7ae92b0a2c90b124",
     "https://nikitatudakov.github.io/demo-pwa/runtime.0ed273321a986c61.js": "5c7a6371fdaea353a96da7be48575fe9e5614137",
-    "https://nikitatudakov.github.io/demo-pwa/styles.df97292611da562a.css": "7596368187db99d68303bf81edd13fbc7adba026"
+    "https://nikitatudakov.github.io/demo-pwa/styles.2f86705586412be1.css": "977bbd88dbddee91b05e79ebb30059656976d031"
   },
   "navigationUrls": [
     {
