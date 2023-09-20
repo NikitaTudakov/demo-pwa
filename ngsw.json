@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1695207281772,
+  "timestamp": 1695207357625,
   "index": "https://nikitatudakov.github.io/demo-pwa/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://nikitatudakov.github.io/demo-pwa/favicon.ico",
         "https://nikitatudakov.github.io/demo-pwa/index.html",
-        "https://nikitatudakov.github.io/demo-pwa/main.47af61eed51804b6.js",
+        "https://nikitatudakov.github.io/demo-pwa/main.9e572ff76c4bae9c.js",
         "https://nikitatudakov.github.io/demo-pwa/manifest.webmanifest",
         "https://nikitatudakov.github.io/demo-pwa/polyfills.798bd4757a459d16.js",
         "https://nikitatudakov.github.io/demo-pwa/runtime.0ed273321a986c61.js",
@@ -52,8 +52,8 @@
     "https://nikitatudakov.github.io/demo-pwa/assets/icons/mstile-150x150.png": "2eb108a49650ef224049e6b922e4ff49827774f2",
     "https://nikitatudakov.github.io/demo-pwa/assets/icons/safari-pinned-tab.svg": "b61c2fe016bbd166a78a89e2f65c2390521766af",
     "https://nikitatudakov.github.io/demo-pwa/favicon.ico": "08212d4fcb1043781c5b407bbdab3c382cfc7ad7",
-    "https://nikitatudakov.github.io/demo-pwa/index.html": "8eb3597d3ac5219954074e6f978301c158780cb5",
-    "https://nikitatudakov.github.io/demo-pwa/main.47af61eed51804b6.js": "d5e374845414473a21fa8f58f5e3bd297a417e53",
+    "https://nikitatudakov.github.io/demo-pwa/index.html": "db2e8a0888f49ec8ad91d2359d4020439ccf443f",
+    "https://nikitatudakov.github.io/demo-pwa/main.9e572ff76c4bae9c.js": "bf62db83d7e16d9cb34ab4fe4de4b62277a1e72e",
     "https://nikitatudakov.github.io/demo-pwa/manifest.webmanifest": "89d55e4608b0d7490f8dc2ef725f7a7537ec3198",
     "https://nikitatudakov.github.io/demo-pwa/polyfills.798bd4757a459d16.js": "4021a524ebde9e9a616d26df7ae92b0a2c90b124",
     "https://nikitatudakov.github.io/demo-pwa/runtime.0ed273321a986c61.js": "5c7a6371fdaea353a96da7be48575fe9e5614137",
