@@ -3,6 +3,17 @@
     <h1>Notifications</h1>
     <div class="actions">
         <button mat-raised-button color="primary" (click)="onRequestNotificationPermision()">Request notification permision</button>
-        <button mat-raised-button color="primary" (click)="onSendNotification('this is test sending')">Send notification</button>
+        <mat-form-field>
+            <input matInput placeholder="Notification Message" [(ngModel)]="notificationMessage">
+        </mat-form-field>
+        <button
+            mat-raised-button
+            color="primary"
+            (click)="onSendNotification()"
+            [disabled]="!notificationMessage"
+        >
+            Send notification
+        </button>
+
     </div>
 </div>

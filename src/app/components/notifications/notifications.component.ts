@@ -8,14 +8,16 @@ import { NotificationsService } from 'src/app/services/notifications.service';
 })
 export class NotificationsComponent implements OnInit {
 
+  public notificationMessage: string = '';
+
   constructor(private notificationsService: NotificationsService) { }
 
   ngOnInit(): void {
   }
 
 
-  public onSendNotification(message: string) {
-    this.notificationsService.sendNotification(message);
+  public onSendNotification() {
+    this.notificationsService.sendNotification(this.notificationMessage);
   }
 
   public onRequestNotificationPermision() {

@@ -1,4 +1,43 @@
 <app-back-button></app-back-button>
 <div class="content">
-    <p>web-auth works!</p>
+    <h1>Authentification</h1>
+
+    <div class="actions">
+        <button
+            *ngIf="!isAuthenticated"
+            mat-raised-button
+            color="primary"
+            (click)="onRegisterClick()"
+        >
+            Register
+        </button>
+        <button
+            *ngIf="isRegistered && !isAuthenticated"
+            mat-raised-button
+            (click)="onAuthenticateClick()"
+        >
+            Authentificate
+        </button>
+        <button
+            *ngIf="isAuthenticated"
+            mat-raised-button
+            color="warn"
+            (click)="onRemoveCredentialsClick()"
+        >
+            Remove credentials
+        </button>
+    </div>
+
+    <div class="info">
+        <div *ngIf="isRegistered && !isAuthenticated">
+            <p class="info__text">Congratulations,You are registered</p>
+        </div>
+        <div *ngIf="isAuthenticated">
+            <p class="info__text">Wellcome,You are authenticated</p>
+        </div>
+
+        <div *ngIf="isRemoved">
+            <p class="info__text info__text-red">Your Credentials has removed, good bye and have a good day</p>
+        </div>
+    </div>
 </div>

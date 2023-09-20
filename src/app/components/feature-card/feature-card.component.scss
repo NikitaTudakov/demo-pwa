@@ -1,11 +1,10 @@
 .feature-card {
-    height: 200px;
-    width: 200px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 50px;
     align-items: center;
-    border-radius: 10px;
     background-color: #64CCC5;
     transition: 0.3s;
     cursor: pointer;
@@ -15,14 +14,14 @@
     }
 
     &__name {
-        font-size: 16px;
+        font-size: 25px;
         font-weight: 500;
     }
 
     mat-icon {
-        font-size: 60px;
-        width: 60px;
-        height: 60px;
+        font-size: 150px;
+        width: 150px;
+        height: 150px;
         margin-top: 10px;
     }
 }

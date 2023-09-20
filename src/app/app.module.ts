@@ -13,6 +13,9 @@ import { NotificationsComponent } from './components/notifications/notifications
 import { AppRoutingModule } from './app-routing.module';
 import { BackButtonComponent } from './components/back-button/back-button.component';
 import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import {MatButtonModule} from '@angular/material/button';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

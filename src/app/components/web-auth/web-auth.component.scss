@@ -1,3 +1,35 @@
 .content {
     padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+    align-self: start;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap : 15px;
+    
+    width: 270px;
+
+
+    button {
+        font-size: 16px;
+        padding: 5px 10px;
+        width: 270px;
+        white-space: normal;
+    }
+}
+
+.info {
+    margin-top: 10%;
+    align-self: start;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
 }
