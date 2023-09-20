@@ -32,7 +32,7 @@ export class NotificationsService {
   }
 
   private showNotification(body: string) {
-    const title = 'What PWA Can Do Today';
+    const title = 'Demo PWA App';
     const payload = {
       body
     };

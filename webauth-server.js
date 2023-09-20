@@ -27,7 +27,7 @@ const origin = 'http://localhost:4200';
 
 const app = express();
 
-app.use(cookieParser('whatpwacandotoday'));
+app.use(cookieParser('demopwa'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json({limit: '5mb'}));
 app.use(cors({
@@ -36,7 +36,7 @@ app.use(cors({
 }));
 
 app.use(session({
-  secret: 'whatpwacandotoday',
+  secret: 'demopwa',
   resave: true,
   saveUninitialized: true,
   cookie: {
