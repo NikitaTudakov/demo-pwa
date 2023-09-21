@@ -15,6 +15,9 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { initializeApp } from "firebase/app";
+
+initializeApp(environment.firebaseConfig);
 
 
 @NgModule({
@@ -32,8 +35,6 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
     MatIconModule,

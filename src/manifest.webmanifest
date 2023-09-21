@@ -2,10 +2,11 @@
     "name": "Demo PWA App",
     "short_name": "Demo PWA",
     "description": "A Progressive Web App built with Angular.",
-    "start_url": "https://nikitatudakov.github.io/demo-pwa/",
+    "start_url": "https://fir-pwa-3fcce.web.app",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#007bff",
+    "gsm_sender_id": "103953800507",
     "icons": [
       {
         "src": "assets/icons/android-chrome-192x192.png",

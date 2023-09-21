@@ -25,7 +25,6 @@ export class WebAuthService {
       credentialCreationOptions.user.id = new Uint8Array(credentialCreationOptions.user.id.data);
       credentialCreationOptions.user.name = 'pwa@example.com';
       credentialCreationOptions.user.displayName = 'What PWA Can Do Today';
-  
       const credential: any = await navigator.credentials.create({
         publicKey: credentialCreationOptions
       });

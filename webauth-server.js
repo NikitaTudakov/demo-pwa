@@ -12,7 +12,9 @@ const base64url = require('base64url');
 
 const fido = new Fido2Lib({
   timeout: 60000,
+  // rpId: 'nikitatudakov.github.io',
   rpId: 'localhost',
+  // rpId: 'fir-pwa-3fcce.web.app',
   rpName: 'What PWA Can Do Today',
   rpIcon: 'https://whatpwacando.today/src/img/icons/icon-512x512.png',
   challengeSize: 128,
@@ -23,8 +25,10 @@ const fido = new Fido2Lib({
   authenticatorUserVerification: 'required'
 });
 
-// const origin = 'http://localhost:4200';
-const origin = 'https://nikitatudakov.github.io';
+const origin = 'http://localhost:4200';
+// const origin = 'https://nikitatudakov.github.io';
+// const origin = 'https://fir-pwa-3fcce.web.app';
+
 
 const app = express();
 
@@ -38,10 +42,10 @@ app.use(cors({
 
 app.use(session({
   secret: 'demopwa',
-  resave: true,
+  resave: false,
   saveUninitialized: true,
   cookie: {
-    secure: false,
+    secure: true,
     maxAge: 60000
   }
 }));
@@ -66,8 +70,8 @@ app.get('/registration-options', async (req, res) => {
 
 app.post('/register', async (req, res) => {
   const {credential} = req.body;
-
-  const challenge = new Uint8Array(req.session.challenge.data).buffer;
+  console.log(req.session)
+  const challenge = new Uint8Array(req.session.challenge?.data || []).buffer;
   credential.rawId = new Uint8Array(Buffer.from(credential.rawId, 'base64')).buffer;
   credential.response.attestationObject = base64url.decode(credential.response.attestationObject, 'base64');
   credential.response.clientDataJSON = base64url.decode(credential.response.clientDataJSON, 'base64');
@@ -109,7 +113,7 @@ app.post('/authenticate', async (req, res) => {
 
   credential.rawId = new Uint8Array(Buffer.from(credential.rawId, 'base64')).buffer;
 
-  const challenge = new Uint8Array(req.session.challenge.data).buffer;
+  const challenge = new Uint8Array(req.session.challenge?.data || []).buffer;
   const {publicKey, prevCounter} = req.session;
 
   if(publicKey === 'undefined' || prevCounter === undefined) {
@@ -122,11 +126,11 @@ app.post('/authenticate', async (req, res) => {
       factor: 'either',
       publicKey,
       prevCounter,
-      userHandle: new Uint8Array(Buffer.from(req.session.userHandle, 'base64')).buffer  //new Uint8Array(Buffer.from(req.session.userHandle.data)).buffer
+      userHandle: new Uint8Array(Buffer.from(req.session.userHandle, 'base64')).buffer
     };
 
     try {
-      await fido.assertionResult(credential, assertionExpectations); // will throw on error
+      await fido.assertionResult(credential, assertionExpectations);
 
       res.json({status: 'ok'});
     }
