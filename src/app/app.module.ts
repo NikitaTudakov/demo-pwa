@@ -16,6 +16,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { initializeApp } from "firebase/app";
+import {ClipboardModule} from '@angular/cdk/clipboard';
 
 initializeApp(environment.firebaseConfig);
 
@@ -40,7 +41,8 @@ initializeApp(environment.firebaseConfig);
     MatIconModule,
     MatButtonModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

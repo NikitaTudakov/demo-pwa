@@ -2,7 +2,14 @@
 <div class="content">
     <h1>Notifications</h1>
     <div class="actions">
-        <button mat-raised-button color="primary" (click)="onRequestNotificationPermision()">Request notification permision</button>
+        <button
+            mat-raised-button
+            color="primary"
+            (click)="onRequestNotificationPermision()"
+        >
+            Request notification permision
+        </button>
+        <button [cdkCopyToClipboard]="notificationToken" mat-raised-button>Copy notification token</button>
         <mat-form-field>
             <input matInput placeholder="Notification Message" [(ngModel)]="notificationMessage">
         </mat-form-field>
