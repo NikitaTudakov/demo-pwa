@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -7,27 +8,28 @@ export class WebAuthService {
 
   constructor() { }
 
-  public  apiUrl = 'http://localhost:3000';
+  public  apiUrl = environment.apiUrl;
   public hasCredential = localStorage.getItem('credential') !== null;
 
 
   async register(): Promise<boolean> {
     try {
-      const credentialCreationOptions = await (await fetch(`${this.apiUrl}/registration-options`, {
+      const {registrationOptions, session } = await (await fetch(`${this.apiUrl}/registration-options`, {
         mode: 'cors',
         headers: {
           'Content-Type': 'application/json'
         },
         credentials: 'include'
       })).json();
-  
-      credentialCreationOptions.challenge = new Uint8Array(credentialCreationOptions.challenge.data);
-      credentialCreationOptions.user.id = new Uint8Array(credentialCreationOptions.user.id.data);
-      credentialCreationOptions.user.name = 'pwa@example.com';
-      credentialCreationOptions.user.displayName = 'What PWA Can Do Today';
+      
+      registrationOptions.challenge = new Uint8Array(registrationOptions.challenge.data);
+      registrationOptions.user.id = new Uint8Array(registrationOptions.user.id.data);
+      registrationOptions.user.name = 'pwa@example.com';
+      registrationOptions.user.displayName = 'What PWA Can Do Today';
       const credential: any = await navigator.credentials.create({
-        publicKey: credentialCreationOptions
+        publicKey: registrationOptions
       });
+
   
       const credentialId = this.bufferToBase64(credential.rawId);
   
@@ -39,11 +41,12 @@ export class WebAuthService {
           attestationObject: this.bufferToBase64(credential.response.attestationObject),
           clientDataJSON: this.bufferToBase64(credential.response.clientDataJSON),
           id: credential.id,
-          type: credential.type
+          type: credential.type,
+          session:session
         }
       };
   
-      await (await fetch(`${this.apiUrl}/register`, {
+      const resp = await (await fetch(`${this.apiUrl}/register`, {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -52,19 +55,20 @@ export class WebAuthService {
         body: JSON.stringify({credential: data}),
         credentials: 'include'
       })).json();
+
+      localStorage.setItem('session', JSON.stringify(resp.session));
   
       return true
     }
     catch(e) {
       console.error('registration failed', e);
-  
       return false
     }
   }
 
   async authenticate(): Promise<boolean> {
     try {
-      const credentialRequestOptions = await (await fetch(`${this.apiUrl}/authentication-options`, {
+      const {authnOptions} = await (await fetch(`${this.apiUrl}/authentication-options`, {
         mode: 'cors',
         headers: {
           'Content-Type': 'application/json'
@@ -73,9 +77,10 @@ export class WebAuthService {
       })).json();
 
       const {credentialId} = JSON.parse(localStorage.getItem('credential') || '');
-
-      credentialRequestOptions.challenge = new Uint8Array(credentialRequestOptions.challenge.data);
-      credentialRequestOptions.allowCredentials = [
+      const session = JSON.parse(localStorage.getItem('session') || '');
+      session.challenge = authnOptions.challenge;
+      authnOptions.challenge = new Uint8Array(authnOptions.challenge.data);
+      authnOptions.allowCredentials = [
         {
           id: this.base64ToBuffer(credentialId),
           type: 'public-key',
@@ -84,7 +89,7 @@ export class WebAuthService {
       ];
 
       const credential: any = await navigator.credentials.get({
-        publicKey: credentialRequestOptions
+        publicKey: authnOptions
       });
 
       const data = {
@@ -95,7 +100,8 @@ export class WebAuthService {
           userHandle: this.bufferToBase64(credential.response.userHandle),
           clientDataJSON: this.bufferToBase64(credential.response.clientDataJSON),
           id: credential.id,
-          type: credential.type
+          type: credential.type,
+          session:session
         }
       };
 
@@ -127,6 +133,7 @@ export class WebAuthService {
 
   public removeCredential(): void {
     localStorage.removeItem('credential');
+    localStorage.removeItem('session');
   }
 
   
