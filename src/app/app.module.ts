@@ -17,6 +17,8 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { initializeApp } from "firebase/app";
 import {ClipboardModule} from '@angular/cdk/clipboard';
+import { BarcodeDetectorComponent } from './components/barcode-detector/barcode-detector.component';
+import { MediaCaptureComponent } from './components/media-capture/media-capture.component';
 
 initializeApp(environment.firebaseConfig);
 
@@ -28,7 +30,9 @@ initializeApp(environment.firebaseConfig);
     FeatureCardComponent,
     WebAuthComponent,
     NotificationsComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    BarcodeDetectorComponent,
+    MediaCaptureComponent
   ],
   imports: [
     BrowserModule,

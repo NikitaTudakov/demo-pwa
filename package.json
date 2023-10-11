@@ -22,6 +22,8 @@
     "@angular/pwa": "^0.5.3",
     "@angular/router": "^14.2.0",
     "@angular/service-worker": "^14.2.0",
+    "@sec-ant/zxing-wasm": "^2.1.5",
+    "barcode-detector": "^2.0.3",
     "base64url": "^3.0.1",
     "cookie-parser": "^1.4.6",
     "errorhandler": "^1.5.1",
@@ -44,6 +46,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~4.7.2"
+    "typescript": "^5.2.2"
   }
 }

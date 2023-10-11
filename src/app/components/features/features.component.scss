@@ -14,6 +14,7 @@
 .features {
     display: flex;
     flex-grow: 1;
+    flex-wrap: wrap;
 
     app-feature-card {
         flex-basis: 50%;

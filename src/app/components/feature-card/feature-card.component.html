@@ -1,4 +1,9 @@
 <div class="feature-card" [routerLink]="feature.routerUrl">
-    <div><mat-icon>{{feature.icon}}</mat-icon></div>
+    <div>
+        <mat-icon *ngIf="feature.icon">
+            {{feature.icon}}
+        </mat-icon>
+        <img *ngIf="feature.iconUrl" [src]="feature.iconUrl" [alt]="feature.name">
+    </div>
     <span class="feature-card__name">{{feature.name}}</span>
 </div>

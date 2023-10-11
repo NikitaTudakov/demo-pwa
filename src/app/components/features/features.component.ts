@@ -11,6 +11,9 @@ export class FeaturesComponent implements OnInit {
   public featureList: Feature[] = [
     {name:'Web Authentication',icon:'fingerprint', routerUrl:'web-auth'},
     {name:'Notifications', icon:'notifications', routerUrl:'notifications'},
+    {name:'Media capture', icon:'perm_media', routerUrl:'media-capture'},
+    {name:'Barcode detection', iconUrl:'assets/icons/barcode-scan-icon.svg', routerUrl:'barcode-detection'},
+
   ]
   constructor() { }
 

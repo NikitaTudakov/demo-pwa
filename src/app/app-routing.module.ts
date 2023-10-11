@@ -3,11 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { FeaturesComponent } from './components/features/features.component';
 import { WebAuthComponent } from './components/web-auth/web-auth.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
+import { MediaCaptureComponent } from './components/media-capture/media-capture.component';
+import { BarcodeDetectorComponent } from './components/barcode-detector/barcode-detector.component';
 
 const routes: Routes = [
   { path: '', component: FeaturesComponent },
   { path: 'web-auth', component: WebAuthComponent },
-  { path: 'notifications', component: NotificationsComponent}
+  { path: 'notifications', component: NotificationsComponent},
+  { path: 'media-capture', component: MediaCaptureComponent},
+  { path: 'barcode-detection', component: BarcodeDetectorComponent},
 ];
 
 @NgModule({

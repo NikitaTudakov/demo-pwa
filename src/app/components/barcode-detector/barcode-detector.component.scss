@@ -1,0 +1,22 @@
+.content {
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 30px;
+        align-self: start;
+        margin-bottom: 5%;
+    }
+
+    .main-block {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .error-msg {
+        color: red;
+    }
+}
