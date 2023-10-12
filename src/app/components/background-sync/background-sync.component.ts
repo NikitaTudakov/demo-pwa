@@ -23,14 +23,40 @@ export class BackgroundSyncComponent implements OnInit {
     }
 
     public saveUser() {
-        this.userService.addUser(this.userForm.value).pipe(switchMap(() => {
-            this.userForm.reset();
-            this.userForm.markAsPristine();
-            this.userForm.markAsUntouched();
-            return this.userService.getUsers();
-        })).subscribe((users: any) => {
-            this.dataSource  = users;
-        });
+        if(navigator.onLine) {
+            this.userService.addUser(this.userForm.value).pipe(switchMap(() => {
+                this._resetForm()
+                return this.userService.getUsers();
+            })).subscribe((users: any) => {
+                this.dataSource  = users;
+            });
+        } else {
+            this.userService.storeUserLocally(this.userForm.value);
+            this._resetForm()
+            this.dataSource = this.userService.getLocalUsers();
+            (this.dataSource.length === 1) && this._triggerBackgroundSync();
+        }
+
+    }
+
+    private _triggerBackgroundSync() {
+        if (!navigator.serviceWorker.controller) {
+          // Service worker not registered, handle this case accordingly
+          console.error('Service worker not registered.');
+        } else {
+          navigator.serviceWorker.ready
+            .then((registration:any) => {
+              // Register a sync event for background synchronization
+              return registration.sync.register('syncUsers');
+            })
+            .then(() => {
+              console.log('Background sync registered.');
+            })
+            .catch(error => {
+              // Handle error while registering background sync
+              console.error('Error registering background sync:', error);
+            });
+        }
     }
 
     private _initUserForm() {
@@ -39,6 +65,12 @@ export class BackgroundSyncComponent implements OnInit {
             surname: new FormControl('', Validators.required),
             dateOfBirth: new FormControl('', Validators.required)
         });
+    }
+
+    private _resetForm() {
+        this.userForm.reset();
+        this.userForm.markAsPristine();
+        this.userForm.markAsUntouched();
     }
 
 }

@@ -22,6 +22,18 @@ export class BackgroundSyncService {
         return this.http.post(`${this.dbApiUrl}/users`, user);
     }
 
+    storeUserLocally(user: any) {
+        const localUsers = this.getLocalUsers();
+
+        localUsers.push(user);
+        localStorage.setItem('localUsers', JSON.stringify(localUsers));
+    }
+
+    getLocalUsers() {
+        return localStorage.getItem('localUsers') ? 
+        JSON.parse(localStorage.getItem('localUsers')!) : [];
+    }
+
     updateUser(id: number, user: any) {
         return this.http.put(`${this.dbApiUrl}/users/${id}`, user);
     }
