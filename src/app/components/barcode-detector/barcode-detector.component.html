@@ -3,11 +3,19 @@
     <h1>Barcode and QR reader</h1>
 
     <div class="main-block">
-        <span *ngIf="checkReaderAvailablity" class="error-msg">This feature is not (yet) supported on your device</span>
 
-        <div>
-            <!-- <video id="video" autoplay></video> -->
-          </div>
+        <div class="scanner-container">
+            <span>Scanner is ready for reading</span>
+            <!-- <zxing-scanner [formats]="allowedFormats"></zxing-scanner> -->
+            <barcode-scanner-livestream
+                type="code_128"
+                (valueChanges)="onValueChanges($event)"
+                (started)="(onStarted)"
+            ></barcode-scanner-livestream>
+            <div [hidden]="!barcodeValue">
+                {{ barcodeValue }}
+            </div>
+        </div>
     </div>
 
 </div>

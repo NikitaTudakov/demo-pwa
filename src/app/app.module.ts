@@ -19,6 +19,8 @@ import { initializeApp } from "firebase/app";
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import { BarcodeDetectorComponent } from './components/barcode-detector/barcode-detector.component';
 import { MediaCaptureComponent } from './components/media-capture/media-capture.component';
+import { BarcodeScannerLivestreamModule } from "ngx-barcode-scanner";
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 initializeApp(environment.firebaseConfig);
 
@@ -46,7 +48,9 @@ initializeApp(environment.firebaseConfig);
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    ClipboardModule
+    ClipboardModule,
+    BarcodeScannerLivestreamModule,
+    ZXingScannerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
