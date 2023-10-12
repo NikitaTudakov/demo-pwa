@@ -22,7 +22,7 @@ export class BackgroundSyncComponent implements OnInit {
         });
     }
 
-    public saveUser() {
+    public async saveUser() {
         if(navigator.onLine) {
             this.userService.addUser(this.userForm.value).pipe(switchMap(() => {
                 this._resetForm()
@@ -31,9 +31,9 @@ export class BackgroundSyncComponent implements OnInit {
                 this.dataSource  = users;
             });
         } else {
-            this.userService.storeUserLocally(this.userForm.value);
-            this._resetForm()
-            this.dataSource = this.userService.getLocalUsers();
+            await this.userService.addUserOffline(this.userForm.value);
+            this.dataSource = await this.userService.getOfflineUsers();
+            this._resetForm();
             (this.dataSource.length === 1) && this._triggerBackgroundSync();
         }
 
@@ -69,8 +69,8 @@ export class BackgroundSyncComponent implements OnInit {
 
     private _resetForm() {
         this.userForm.reset();
-        this.userForm.markAsPristine();
         this.userForm.markAsUntouched();
+        this.userForm.markAsPristine();
     }
 
 }
