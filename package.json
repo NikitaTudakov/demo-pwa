@@ -11,25 +11,24 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.8",
-    "@angular/cdk": "^13.0.0",
+    "@angular/cdk": "^16.2.7",
     "@angular/common": "^16.2.8",
     "@angular/compiler": "^16.2.8",
     "@angular/core": "^16.2.8",
     "@angular/forms": "^16.2.8",
-    "@angular/material": "^13.0.0",
+    "@angular/material": "^16.2.7",
     "@angular/platform-browser": "^16.2.8",
     "@angular/platform-browser-dynamic": "^16.2.8",
     "@angular/pwa": "^0.5.3",
     "@angular/router": "^16.2.8",
     "@angular/service-worker": "^16.2.8",
-    "@sec-ant/zxing-wasm": "^2.1.5",
-    "barcode-detector": "^2.0.3",
     "base64url": "^3.0.1",
     "cookie-parser": "^1.4.6",
     "errorhandler": "^1.5.1",
     "express-session": "^1.17.3",
     "fido2-lib": "^3.4.1",
     "firebase": "^10.4.0",
+    "ngx-webcam": "^0.4.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.3"
@@ -46,6 +45,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "^5.2.2"
+    "typescript": "^4.9.5"
   }
 }

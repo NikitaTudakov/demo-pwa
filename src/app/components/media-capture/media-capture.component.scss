@@ -7,7 +7,18 @@
     h1 {
         font-size: 30px;
         align-self: start;
-        margin-bottom: 5%;
+        margin-bottom: 10px;
+    }
+
+    .actions {
+        width: 100%;
+        margin: 10px 0;
+        display: flex;
+        gap: 10px;
+
+        button:disabled {
+            opacity: .5;
+        }
     }
 }
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BarcodeDetector } from 'barcode-detector';
 
 @Component({
   selector: 'app-barcode-detector',
@@ -20,7 +19,6 @@ export class BarcodeDetectorComponent implements OnInit {
       this.isReaderAvailable = true;
     } else {
       this.isReaderAvailable = false;
-
       // this.barcodeDetector = new BarcodeDetector({
       //   formats: ["code_39", "codabar", "ean_13"],
       // });

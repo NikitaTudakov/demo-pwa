@@ -1,5 +1,32 @@
 <app-back-button></app-back-button>
 <div class="content">
     <h1>Media capture</h1>
-    
+    <div class="actions">
+        <button mat-icon-button (click)="startCamera()" [disabled]="isCameraOn">
+            <mat-icon>video_call</mat-icon>
+        </button>
+        <button mat-icon-button (click)="stopCamera()" [disabled]="!isCameraOn">
+            <mat-icon>close</mat-icon>
+        </button>
+        <!-- <button (click)="showVideo()">Show Video</button> -->
+    </div>
+    <video #videoElement autoplay></video>
+    <div class="actions" *ngIf="isCameraOn" [ngStyle]="{'justify-content':'center'}">
+        <button mat-icon-button (click)="startRecording()" *ngIf="!isRecording">
+            <mat-icon>play_arrow</mat-icon>
+        </button>
+        <button mat-icon-button (click)="pauseRecording()" *ngIf="isRecording">
+            <mat-icon>pause</mat-icon>
+        </button>
+        <button mat-icon-button
+            (click)="stopRecording()"
+            [disabled]="!onPaused && !isRecording"
+            [ngStyle]="{'color':'#ff0000'}"
+        >
+            <mat-icon>stop</mat-icon>
+        </button>
+        <button mat-icon-button (click)="saveVideo()" *ngIf="isFileExist">
+            <mat-icon>save_alt</mat-icon>
+        </button>
+    </div>
 </div>
