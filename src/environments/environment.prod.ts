@@ -1,6 +1,7 @@
 export const environment = {
   production: true,
   apiUrl: 'https://app-fjwi4neoxa-uc.a.run.app',
+  dbApiUrl: 'http://localhost:3001',
   firebaseConfig: {
     apiKey: "AIzaSyBu3EdpMgXfpe28b8IdhJYcpAKDD5pfH4c",
     authDomain: "fir-pwa-3fcce.firebaseapp.com",

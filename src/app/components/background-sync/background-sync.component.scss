@@ -1,0 +1,52 @@
+.content {
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 30px;
+        align-self: start;
+        margin-bottom: 5%;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        align-items: center;
+
+        &__field {
+            width: 100%;
+        }
+
+        button {
+            align-self: end;
+            margin-top: 20px;
+            padding: 0px 50px;
+
+            &:disabled {
+                opacity: .5;
+            }
+        }
+    }
+
+    .table {
+        margin-top: 50px;
+        width: 50%;
+
+        th,td {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .form {
+            width: 100%;
+        }
+
+        .table {
+            width: 100%;
+        }
+    }
+}
