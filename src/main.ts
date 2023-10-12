@@ -19,4 +19,12 @@ if ('serviceWorker' in navigator && environment.production) {
     .catch(error => {
       console.error('Service Worker registration failed:', error);
     });
+
+  navigator.serviceWorker.register('./background-sync-sw.js',{scope: '/demo-pwa/'})
+    .then(registration => {
+      console.log('Background Service Worker registered with scope:', registration.scope);
+    })
+    .catch(error => {
+      console.error('Background Service Worker registration failed:', error);
+    });
 }
