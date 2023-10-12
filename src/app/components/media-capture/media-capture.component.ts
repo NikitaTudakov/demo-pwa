@@ -1,11 +1,11 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'app-media-capture',
     templateUrl: './media-capture.component.html',
     styleUrls: ['./media-capture.component.scss']
 })
-export class MediaCaptureComponent implements OnInit {
+export class MediaCaptureComponent implements OnInit, OnDestroy {
     public isCameraOn: boolean = false;
     public isRecording: boolean = false;
     public onPaused: boolean = false;
@@ -18,6 +18,10 @@ export class MediaCaptureComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
+    }
+
+    ngOnDestroy(): void {
+        this.isCameraOn && this.stopCamera();
     }
 
     async startCamera() {
@@ -38,6 +42,10 @@ export class MediaCaptureComponent implements OnInit {
         this.isCameraOn = false;
         tracks.forEach(track => track.stop());
         video!.srcObject = null;
+        const audioContext = new AudioContext()
+        audioContext.close();
+        const microphone = audioContext.createMediaStreamSource(stream);
+        microphone.disconnect();
     }
 
     startRecording() {
